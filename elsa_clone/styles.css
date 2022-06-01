@@ -1,0 +1,55 @@
+@import url('http://fonts.cdnfonts.com/css/salsa');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+body{
+    height: 100vh;
+    background-color: #303030;
+}
+header{
+    height: 94px;
+    color:black;
+    font-family: "Salsa";
+    background-color:white;
+    text-align: center;
+    position:fixed;
+    width:100%;
+    box-shadow: 0 0 12px 0 rgb(0 0 0 / 50%);
+    z-index: 10;
+}
+.logo{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    transform: translateY(25%);
+}
+.logo img{
+    margin-right: 10px;
+}
+.register{
+    background-color:white;
+    position: relative;
+    top:94px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 406px;
+}
+.text{
+    text-align: center;
+    text-transform:uppercase;
+}
+.image img{
+    right: 190px;
+    width:302px;
+}
+
+button{
+    width:274px;
+    height:67px;
+    border-radius: 12px;
+    border:2px
+}
