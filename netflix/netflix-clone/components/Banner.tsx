@@ -6,7 +6,7 @@ import { baseUrl } from "./constants/movie";
 function Banner() {
   const movie =
     netflixOriginals[Math.floor(Math.random() * netflixOriginals.length)];
-  console.log(typeof netflixOriginals);
+
   return (
     <div
       className="flex flex-col space-y-2 py-16 md:spay-y-4 lg:h-[70vh]
