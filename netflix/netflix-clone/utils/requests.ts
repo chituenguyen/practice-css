@@ -1,5 +1,6 @@
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY
 const BASE_URL = 'https://api.themoviedb.org/3'
+// ec77c74e60941e07f90dab82c25947ca
 
 const requests = {
   fetchTrending: `${BASE_URL}/trending/all/week?api_key=${API_KEY}&language=en-US`,
