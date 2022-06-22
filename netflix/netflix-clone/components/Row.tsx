@@ -8,7 +8,7 @@ import Thumbnail from "./Thubnails";
 
 interface Props {
   title: string;
-  movies: {};
+  movies: object[];
 }
 function Row({ title, movies }: Props) {
   const rowRef = useRef<HTMLDivElement>(null);
@@ -47,8 +47,11 @@ function Row({ title, movies }: Props) {
           className="flex scrollbar-hide items-center space-x-0.5 overflow-x-scroll md:space-x-2.5
         md:p-2" 
         >
-          {Object.keys(movies).map((item) => (
+          {/* {Object.keys(movies).map((item) => (
             <Thumbnail movie={movies[item]} />
+          ))} */}
+          {movies.map((item)=>(
+            <Thumbnail  movie={item}></Thumbnail>
           ))}
         </div>
         <ChevronRightIcon

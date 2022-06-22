@@ -37,6 +37,7 @@ const Home = () => {
         </section>
       </main>
       {/* Modal*/}
+    
     </div>
   );
 };
