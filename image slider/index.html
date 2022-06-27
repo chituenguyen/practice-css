@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+      <!-- Image slider start  -->
+    <div class="slider">
+        <div class="slides">
+            <!-- radio button start -->
+            <input type="radio" id="radio1">
+            <input type="radio" id="radio2">
+            <input type="radio" id="radio3">
+            <input type="radio" id="radio4">
+            <!-- radio button end -->
+
+            <!-- slide image start -->
+            <div class="slide first"></div>
+            <img src="https://jssors8.azureedge.net/demos/image-slider/img/px-beach-daylight-fun-1430675-image.jpg" alt="">
+            <div class="slide">
+                <img src="https://jssors8.azureedge.net/demos/image-slider/img/px-fun-man-person-2361598-image.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://wowslider.com/sliders/demo-5/data/images/sweden.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://wowslider.com/sliders/demo-45/data1/images/boat.jpg" alt="">
+            </div>
+            <!-- slide image end -->
+
+            <!-- automatic navigation start -->
+            <div class="navigation-auto">
+                <div class="autobtn1"></div>
+                <div class="autobtn2"></div>
+                <div class="autobtn3"></div>
+                <div class="autobtn4"></div>
+            </div>
+            <!-- automatic navigation end -->
+
+            <!-- manual navigation start -->
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+            <!-- manual navigation end -->
+        </div>
+    </div>
+
+
+    <script>
+        var counter = 1;
+        setInterval(function() {
+            document.getElementById("radio" + counter).checked = true;
+            counter++;
+            if(counter>4){
+                couter=1
+            }
+        },500);
+    </script>
+</body>
+</html>
