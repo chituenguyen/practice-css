@@ -1,0 +1,13 @@
+.header {
+  height: 200px;
+  background-color: red;
+}
+.header__logo {
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/*# sourceMappingURL=style.css.map */

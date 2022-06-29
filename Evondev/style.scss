@@ -1,0 +1,25 @@
+// variable 
+$primary-color:red;
+
+
+// mixin
+@mixin flexbox($align:flex-start,$justify:flex-start){
+    display:flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-wrap: wrap;
+}
+// function
+@function toRem($value){
+    @return $value / 16 ;
+}
+.header{
+    height:200px;
+    background-color: $primary-color;
+    &__logo {
+        background-color: $primary-color;
+        @include flexbox(center,center)
+    }
+}
+
+// nested code
