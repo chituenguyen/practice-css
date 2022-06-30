@@ -1,25 +1,192 @@
-// variable 
-$primary-color:red;
+$primary_color: #ffc87a;
+$text_color: #1a2b5f;
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+}
+// css tag start
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+body {
+  font-family: "Poppins" sans-serif;
+  color: $text_color;
+  line-height: 1.4rem;
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+}
+// css tag end
+@mixin flex($align: flex-start, $justify: flex-start, $wrap: nowrap) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-wrap: $wrap;
+}
+// 1440px, 1170px
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1240px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin: 0 auto;
+}
+
+.header {
+  padding-top: 4rem;
+  &__inner {
+    @include flex(center, space-between);
+  }
+  &__menu {
+    &-list {
+      @include flex(center);
+    }
+    &-item {
+      margin-left: 5rem;
+      &:last-child {
+        margin-left: 7rem;
+      }
+    }
+    &-link {
+      font-size: 1.6rem;
+      color: $text_color;
+      transition: 0.25s ease all;
+      &:hover {
+        color: $primary_color;
+      }
+    }
+  }
+  &__login {
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    border: 1px solid;
+    border-radius: 2.5rem;
+  }
+}
+.logo {
+  font-size: 2rem;
+  font-weight: 600;
+  &__text {
+    color: $primary_color;
+  }
+}
 
 
-// mixin
-@mixin flexbox($align:flex-start,$justify:flex-start){
-    display:flex;
-    align-items: $align;
-    justify-content: $justify;
-    flex-wrap: wrap;
-}
-// function
-@function toRem($value){
-    @return $value / 16 ;
-}
-.header{
-    height:200px;
-    background-color: $primary-color;
-    &__logo {
-        background-color: $primary-color;
-        @include flexbox(center,center)
+
+.banner{
+    padding-top:15rem;
+    padding-bottom: 15rem;
+    max-width: 80rem;
+    margin:0 auto;
+    text-align: center;
+    &__heading{
+        font-weight: 600;
+        font-size: 6rem;
+        margin-bottom: 3rem;
+    }
+    &__desc{
+        font-size: 1.8rem;
+        font-weight: 300;
+        margin-bottom: 4rem;
+    }
+    &__buttons{
+        @include flex(stretch,center );
+        .btn {
+            margin:0 1rem;
+        }
     }
 }
 
-// nested code
+.btn {
+    cursor:pointer;
+    outline:none;
+    font-size: 1.6rem;
+    text-align: center;
+    color:$text_color;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border:0;
+    background-color: transparent;
+    &--border{
+        border: 1px solid currentColor;
+    }
+    &--rounded{
+        border-radius: 5rem;
+    }
+    &--primary {
+        background-color: $primary_color;
+        &.has-shadow{
+            box-shadow: 0px 10px 35px -5px $primary_color ;
+        }
+    }
+}
+
+
+.category{
+    &__list{
+        @include flex(stretch,space-between,wrap)
+    }
+
+    &__item{
+        width:calc(25% - 22.5px);
+        padding:2.5rem;
+        background-color: #fff;
+        border-radius: 2rem;
+        @include flex(stretch,flex-start);
+        flex-direction: column;
+        &:first-child{
+            box-shadow:0 20px 35px -5px rgba(255, 151, 195, 0.25);
+        }
+
+        &:nth-child(2){
+            box-shadow:0 20px 35px -5px rgba(255, 112, 109, 0.25);
+        }
+
+        &:nth-child(3){
+            box-shadow:0 20px 35px -5px rgba(133, 152, 255, 0.25);
+        }
+
+        &:nth-child(4){
+            box-shadow:0 20px 35px -5px rgba(255, 200, 122, 0.25);
+        }
+
+    }
+
+    &__image{
+        border-radius: inherit;
+        height: 14rem;
+        object-fit: cover;
+        margin-bottom: 4rem;
+    }
+
+    &__name{
+        font-size: 2.5rem;
+        margin-bottom: 2.5rem;
+        white-space:nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+    }
+
+    &__detail{
+        font-size: 1.4rem;
+        color:#c6cad7;
+        margin-top:auto;
+        i{
+            margin-left: 1.5rem;
+        }
+    }
+}
