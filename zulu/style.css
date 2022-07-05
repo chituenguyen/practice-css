@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@400;600;700&display=swap");
+html {
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: black;
+  font-size: 1.6rem;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  border: 0;
+  font-size: 16px;
+  color: #272e35;
+  padding: 2rem 4.5rem;
+  border-radius: 15px;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.btn__primary {
+  color: white;
+  background-color: #579aff;
+}
+
+.header {
+  padding-top: 43px;
+  display: flex;
+  align-items: center;
+}
+.header__logo {
+  display: block;
+  margin-right: 60px;
+}
+.header__auth {
+  margin-left: auto;
+}
+.header__menu {
+  display: flex;
+  align-items: center;
+}
+.header__menu__item:not(first-child) {
+  margin-left: 75px;
+}
+.header__menu__link {
+  color: #272e35;
+  transition: color 0.2s ease-in-out;
+}
+.header__menu__link:hover {
+  color: #579aff;
+}
+
+/*# sourceMappingURL=style.css.map */
