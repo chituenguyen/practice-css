@@ -1,0 +1,51 @@
+.footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-column-gap: 70px;
+  &__zulu{
+    &__logo{
+        display: inline-block;
+        margin-bottom: 30px;
+    }
+    &__desc{
+        max-width: 250px;
+        margin-bottom: 30px;
+    }
+    &__icon{
+        display: inline-flex;
+        & i{
+            margin-right: 15px;
+            color:white;
+            height:40px;
+            width:40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            border-radius: 100%;
+            &:first-child{
+                background-color: #ff7839;
+            }
+            &:nth-child(2){
+                background-color: #7aafff;
+            }
+            &:last-child{
+                background-color: #FFBA38;
+            }
+        }
+    }
+  }
+  &__product{
+    &__title{
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    & li{
+        margin-bottom: 20px;
+        & a{
+            color:black;
+        }
+    }
+  }
+}

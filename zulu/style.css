@@ -387,4 +387,83 @@ body {
   color: yellow;
 }
 
+.started {
+  max-width: 900px;
+  background-color: #fbfbfb;
+  margin: 0 auto 50px;
+  padding: 60px 20px;
+  border-radius: 30px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.started__block {
+  margin-bottom: 30px;
+}
+.started__desc {
+  max-width: 245px;
+  margin-bottom: 50px;
+}
+.started__chat {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(50px, -50px);
+}
+.started__smile {
+  position: absolute;
+  right: 0;
+  transform: translateX(50%) translateY(-50%);
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-column-gap: 70px;
+}
+.footer__zulu__logo {
+  display: inline-block;
+  margin-bottom: 30px;
+}
+.footer__zulu__desc {
+  max-width: 250px;
+  margin-bottom: 30px;
+}
+.footer__zulu__icon {
+  display: inline-flex;
+}
+.footer__zulu__icon i {
+  margin-right: 15px;
+  color: white;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 100%;
+}
+.footer__zulu__icon i:first-child {
+  background-color: #ff7839;
+}
+.footer__zulu__icon i:nth-child(2) {
+  background-color: #7aafff;
+}
+.footer__zulu__icon i:last-child {
+  background-color: #FFBA38;
+}
+.footer__product__title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.footer__product li {
+  margin-bottom: 20px;
+}
+.footer__product li a {
+  color: black;
+}
+
 /*# sourceMappingURL=style.css.map */
