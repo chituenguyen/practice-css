@@ -18,14 +18,19 @@ img {
   display: block;
   max-width: 100%;
 }
+span{
+    display: block;
+    font-family: "Poppins";
+}
 
 body {
   color: black;
-  font-size: 1.6rem;
-  font-family: "Poppins" sans-serif;
+  font-family: 'Poppins';
+  background-color: #fff;
 }
 .wrapper{
     max-width: 1440px;
+    margin:0 auto;
 }
 .container{
     max-width: 585px;
@@ -40,35 +45,57 @@ body {
     max-width: 585px;
 }
 .header{
-    font-size: 70px;
+    font-size: 100px;
     font-weight:600;
     margin-bottom: 30px;
+    display: flex;
+    & span{
+        margin-right: 7px;
+    }
     & span:first-child {
-        color:blue;
+        color:#5383ec;
     }
     & span:nth-child(2){
-        color:red;
+        color:#d85140;
     }
     & span:nth-child(3){
-        color:yellow;
+        color:#d85140;
     }
     & span:nth-child(4){
-        color:blue;
+        color:#5383ec;
     }
     & span:nth-child(5){
-        color:green;
+        color:#58a65c;
     }
     & span:nth-child(6){
-        color:red;
+        color:#d85140;
     } 
 }
 .search{
     width:100%;
+    position: relative;
     & input{
         height:45px;
         border-radius: 20px;
-        border: 1px solid black opacity(0.5);
+        border: none;
         outline:none;
+        padding:0px 50px;
+        font-size: 15px;
+        box-shadow: 0 0 10px 5px rgba(black, 0.1);
+    }
+    & i:nth-child(1){
+        z-index: 100;
+        position: absolute;
+        top: 25%;
+        left: 20px;
+        transform: translateY(25%);
+    }
+    & i:nth-child(2){
+        z-index: 100;
+        position: absolute;
+        top: 25%;
+        left: calc(100% - 40px);
+        transform: translateY(25%);
     }
 }
 .list{
@@ -82,7 +109,13 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         padding: 5px 5px;  
+        margin-bottom: 10px;
+    }
+    & p{
+        margin-top:10px;
+        color:black;
     }
     & i {
         width:50px;
@@ -93,7 +126,7 @@ body {
         align-items: center;
         text-align: center;
         border-radius: 100%;
-        color:pink;
-        background-color: #eee;
+        // color:pink;
+        background-color: #f1f3f4;
     }
 }
